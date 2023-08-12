@@ -66,7 +66,7 @@ Future<T?> showFlexibleBottomSheet<T>({
   assert(barrierColor == null || isModal);
 
   return Navigator.of(context, rootNavigator: useRootNavigator).push(
-    _FlexibleBottomSheetRoute<T>(
+    FlexibleBottomSheetRoute<T>(
       theme: Theme.of(context),
       barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
       draggableScrollableController: draggableScrollableController,
@@ -148,7 +148,7 @@ Future<T?> showStickyFlexibleBottomSheet<T>({
   assert(barrierColor == null || isModal);
 
   return Navigator.of(context, rootNavigator: useRootNavigator).push(
-    _FlexibleBottomSheetRoute<T>(
+    FlexibleBottomSheetRoute<T>(
       theme: Theme.of(context),
       barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
       minHeight: minHeight ?? 0,
@@ -175,7 +175,7 @@ Future<T?> showStickyFlexibleBottomSheet<T>({
 }
 
 /// A modal route with flexible bottom sheet.
-class _FlexibleBottomSheetRoute<T> extends PopupRoute<T> {
+class FlexibleBottomSheetRoute<T> extends PopupRoute<T> {
   final FlexibleDraggableScrollableWidgetBuilder? builder;
   final FlexibleDraggableScrollableHeaderWidgetBuilder? headerBuilder;
   final FlexibleDraggableScrollableWidgetBodyBuilder? bodyBuilder;
@@ -214,7 +214,7 @@ class _FlexibleBottomSheetRoute<T> extends PopupRoute<T> {
 
   late AnimationController _animationController;
 
-  _FlexibleBottomSheetRoute({
+  FlexibleBottomSheetRoute({
     required this.minHeight,
     required this.initHeight,
     required this.maxHeight,
