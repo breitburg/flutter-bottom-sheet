@@ -215,7 +215,7 @@ class FlexibleBottomSheetRoute<T> extends PopupRoute<T> {
   late AnimationController _animationController;
 
   FlexibleBottomSheetRoute({
-    this.minHeight = 0,
+    this.minHeight = 0.5,
     this.initHeight = 1,
     this.maxHeight = 1,
     this.isCollapsible = true,
