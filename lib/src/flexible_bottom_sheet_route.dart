@@ -216,13 +216,13 @@ class FlexibleBottomSheetRoute<T> extends PopupRoute<T> {
 
   FlexibleBottomSheetRoute({
     this.minHeight = 0,
-    this.initHeight = 0.5,
+    this.initHeight = 1,
     this.maxHeight = 1,
     this.isCollapsible = true,
     this.isDismissible = true,
     this.isExpand = true,
     this.isModal = true,
-    this.isSafeArea = false,
+    this.isSafeArea = true,
     this.draggableScrollableController,
     this.builder,
     this.headerBuilder,
