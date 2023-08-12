@@ -230,7 +230,7 @@ class FlexibleBottomSheetRoute<T> extends PopupRoute<T> {
     this.bodyBuilder,
     this.theme,
     this.barrierLabel,
-    this.anchors,
+    this.anchors = const [1],
     this.minHeaderHeight,
     this.maxHeaderHeight,
     this.decoration,
