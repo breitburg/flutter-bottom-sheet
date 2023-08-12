@@ -234,7 +234,7 @@ class FlexibleBottomSheetRoute<T> extends PopupRoute<T> {
     this.maxHeaderHeight,
     this.decoration,
     this.keyboardBarrierColor,
-    this.bottomSheetColor,
+    this.bottomSheetColor = Colors.transparent,
     this.barrierBottomSheetColor,
     this.duration,
     RouteSettings? settings,
