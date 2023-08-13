@@ -304,7 +304,13 @@ class FlexibleBottomSheetRoute<T> extends PopupRoute<T> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: isSafeArea
-          ? SafeArea(child: bottomSheet, bottom: false)
+          ? SafeArea(
+              bottom: false,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: bottomSheet,
+              ),
+            )
           : bottomSheet,
     );
   }
